@@ -31,7 +31,7 @@ class Form extends React.Component<IFormProps, IFormState>{
                         value={this.state.name}
                         onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ name: e.EventTarget.value})}
                     />
-                    <CardElement className="">
+                    <CardElement className=""></CardElement>
                 </form>
             </main>
         );
@@ -43,6 +43,7 @@ interface IFormProps { }
 
 interface IFormState { 
     name: string;
+    amount: string;
 }
 
 export default injectStripe(Form);
